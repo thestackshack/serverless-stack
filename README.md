@@ -12,6 +12,7 @@ It consists of:
 
 # Setup
 ## Prerequisites 
+- Install `cim` https://cim.sh
 - Register your domain with Route53
 - Or point your existing domain to Route53
 - Configure 'admin@yourdomain.com' to receive the SSL verification email
