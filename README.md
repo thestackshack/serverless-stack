@@ -11,16 +11,17 @@ It consists of:
 
 
 # Setup
-## Prerequisites 
+## Prerequisites
 - Install `cim` https://cim.sh
 - Register your domain with Route53
 - Or point your existing domain to Route53
 - Configure 'admin@yourdomain.com' to receive the SSL verification email
   - You will have to confirm this email address.  This is annoying and I've asked AWS to remove this step if the domain is used with Route53.
-  
+
 ## Stack Up
 - Replace 'example.com' in `ui/_cim.yml` and `api/_cim.yml` with your domain name.
 - Run `cim stack-up --recursive=true`
+- Run `cim lambda-deploy --recursive=true`
 
 ## CI/CD
 CI/CD is available for the `ui`.  When enabled all commits to GitHub will trigger CodePipeline to build, test, and deploy your site.
