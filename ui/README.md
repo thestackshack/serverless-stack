@@ -8,15 +8,18 @@ This template will create the following static website:
 [![](architecture.png)](architecture.png)
 
 # Setup
-## Prerequisites 
+## Prerequisites
 - Register your domain with Route53
 - Or point your existing domain to Route53
 - Configure 'admin@yourdomain.com' to receive the SSL verification email
   - You will have to confirm this email address.  This is annoying and I've asked AWS to remove this step if the domain is used with Route53.
-  
+
 ## Stack Up
 - Replace 'example.com' in _cim.yml with your domain name.
 - Run `cim stack-up`
+
+## Deploy website
+See the build commands in buildspec.yml.  You can run them locally as well.  You just have to setup the AWS CLI.
 
 ## CI/CD
 CI/CD is available.  When enabled all commits to GitHub will trigger CodePipeline to build, test, and deploy your site.
